@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100c13">
+<title>Para Adriely ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Dancing+Script:wght@500;600;700&display=swap');
+:root{--bg:#100c13;--panel:#19121d;--pink:#ff6f9f;--hot:#ed386d;--soft:#ffd6e2;--cream:#fff2f5;--ink:#382333;--muted:#c8b8c6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--bg);color:#fff7fb;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.nav{height:72px;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,6vw,90px);background:rgba(13,10,16,.9);backdrop-filter:blur(16px);border-bottom:1px solid #ffffff14}
+.brand{display:flex;align-items:center;gap:10px;color:var(--pink);font:600 30px 'Dancing Script',cursive}
+.brand-heart{font:36px Arial}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:13px;color:#f5eaf1}
+.nav-links a:hover{color:var(--pink)}
+.menu-toggle{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:560px;position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;isolation:isolate;overflow:hidden;padding:72px clamp(24px,9vw,140px)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(13,9,15,.98) 0%,rgba(13,9,15,.88) 42%,rgba(13,9,15,.15) 100%),url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,var(--bg),transparent 20%,transparent 82%,var(--bg))}
+.hero-copy{max-width:520px;animation:rise .9s ease both}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--soft);font-size:11px;font-weight:700}
+.script{font-family:'Dancing Script',cursive;color:var(--pink)}
+.hero h1{font:600 clamp(64px,8vw,108px)/.98 'Dancing Script',cursive;color:#ff8fb2;margin:18px 0 14px}
+.hero h2{font:italic 600 clamp(23px,3vw,34px) 'Playfair Display',serif;margin:0 0 16px}
+.hero p{color:#f0e5ed;line-height:1.8;max-width:440px;font-size:15px}
+.btn{border:0;border-radius:999px;background:linear-gradient(135deg,#ff6f9f,#e92d62);color:white;padding:14px 23px;font-weight:700;box-shadow:0 9px 26px #ed386d35;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 13px 30px #ed386d55}
+.hero .btn{margin-top:12px}
+.hero-note{align-self:end;justify-self:end;margin:0 2% 8px 0;font:500 27px 'Dancing Script',cursive;color:#ffd4e1;transform:rotate(-7deg);text-align:center;max-width:180px}
+section{padding:72px clamp(20px,7vw,100px)}
+.section-heading{display:flex;align-items:center;gap:13px;margin-bottom:10px}
+.section-heading .heart{font-size:34px;color:var(--pink)}
+.section-heading h2{font:600 clamp(29px,4vw,42px) 'Dancing Script',cursive;margin:0;color:#ffc6d8}
+.sub{color:var(--muted);margin:0 0 28px;line-height:1.7}
+.memories{background:linear-gradient(180deg,#100c13,#130e16)}
+.carousel-wrap{position:relative;display:flex;align-items:center;gap:14px}
+.cards{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:12px 4px 22px;flex:1}
+.cards::-webkit-scrollbar{display:none}
+.memory-card{flex:0 0 clamp(190px,23vw,255px);height:310px;border:1px solid #ffffff20;border-radius:18px;overflow:hidden;position:relative;scroll-snap-align:center;background:#241925;transition:transform .25s,border-color .25s}
+.memory-card:hover{transform:translateY(-5px);border-color:var(--pink)}
+.memory-card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.82)}
+.memory-card:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(10,7,12,.92))}
+.card-caption{position:absolute;z-index:1;bottom:20px;left:18px;right:15px;font:500 25px/1.1 'Dancing Script',cursive;color:white}
+.arrow{flex:0 0 42px;height:42px;border:0;border-radius:50%;background:var(--pink);color:#2a0d19;font-size:23px;display:grid;place-items:center}
+.letter{background:var(--cream);color:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.letter .section-heading h2{color:#382333}
+.letter .section-heading .heart{color:var(--hot)}
+.letter p{font-size:15px;line-height:1.9;color:#553d50}
+.signature{font:600 34px 'Dancing Script',cursive;color:#e63d70;margin-top:24px}
+.photo-frame{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 15px 45px #e75b8033;transform:rotate(1deg)}
+.photo-frame img{width:100%;height:340px;display:block;object-fit:cover}
+.photo-label{position:absolute;left:24px;bottom:24px;font:500 29px 'Dancing Script',cursive;text-shadow:0 2px 10px #000;color:white;max-width:200px}
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#100c13;padding-top:54px;padding-bottom:54px}
+.value{text-align:center;padding:16px 20px;border-right:1px solid #ff6f9f44}
+.value:last-child{border:0}
+.value .icon{font-size:39px;color:var(--pink);display:block;margin-bottom:12px}
+.value h3{font-size:15px;margin:0 0 8px}
+.value p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.closing{min-height:360px;text-align:center;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(0deg,rgba(13,8,17,.78),rgba(13,8,17,.72)),url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1800&q=85') center 48%/cover}
+.closing h2{font:600 clamp(38px,6vw,64px) 'Dancing Script',cursive;color:#ff9cba;margin:0 0 12px}
+.closing p{max-width:570px;line-height:1.8;color:#fff0f5}
+.closing .btn{margin-top:15px}
+.footer{text-align:center;padding:22px;color:#8f7d8d;font-size:12px;background:#0b080d}
+.float-heart{position:fixed;bottom:-40px;z-index:30;color:#ff76a3;pointer-events:none;animation:floatUp linear forwards;text-shadow:0 0 12px #ff6f9f77}
+.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,25px);opacity:0;z-index:50;background:#fff2f5;color:#6e2444;padding:15px 22px;border-radius:16px;box-shadow:0 10px 40px #0005;transition:.3s;text-align:center;width:max-content;max-width:90vw}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media(max-width:760px){
+ .nav{height:64px;padding:0 18px}.brand{font-size:27px}.brand-heart{font-size:30px}
+ .menu-toggle{display:block}.nav-links{display:none;position:absolute;top:63px;left:0;right:0;padding:18px;background:#130e17;flex-direction:column;gap:20px;border-bottom:1px solid #ffffff18}.nav-links.open{display:flex}
+ .hero{min-height:650px;grid-template-columns:1fr;padding:75px 25px 55px;align-items:center}
+ .hero:before{background:linear-gradient(90deg,rgba(13,9,15,.91),rgba(13,9,15,.52)),url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=85') 55% center/cover}
+ .hero h1{font-size:78px}.hero-note{justify-self:end;margin-top:35px;font-size:23px}
+ section{padding:55px 20px}
+ .carousel-wrap{gap:7px}.arrow{flex-basis:34px;width:34px;height:34px;font-size:19px}.memory-card{flex-basis:78%;height:300px}
+ .letter{grid-template-columns:1fr;gap:30px}.photo-frame img{height:270px}
+ .values{grid-template-columns:repeat(2,1fr);padding-top:35px;padding-bottom:35px}
+ .value{padding:20px 12px;border-right:1px solid #ff6f9f44;border-bottom:1px solid #ff6f9f33}
+ .value:nth-child(2){border-right:0}.value:nth-child(3),.value:nth-child(4){border-bottom:0}
+ .closing{min-height:390px;padding:55px 24px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#inicio" aria-label="Início"><span class="brand-heart">♡</span> Adriely</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#inicio">Início</a><a href="#memorias">Nossas memórias</a><a href="#carta">O que eu sinto</a><a href="#sempre">Um pedido ❤️</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <div class="eyebrow">feito com carinho, só para você ♡</div>
+    <h1>Adriely <span>♡</span></h1>
+    <h2>Eu gosto muito de você!</h2>
+    <p>Você é especial pra mim e deixa meus dias mais bonitos. Talvez eu nem sempre saiba demonstrar do jeito certo, mas quero que você nunca duvide do carinho que tenho por você.</p>
+    <a class="btn" href="#carta">♡ Leia uma coisinha que escrevi</a>
+  </div>
+  <div class="hero-note">Você deixa meu mundo mais bonito ♡</div>
+</section>
+
+<section class="memories" id="memorias">
+  <div class="section-heading reveal"><span class="heart">♡</span><h2>Nossas memórias</h2></div>
+  <p class="sub reveal">Cada momento com você tem um lugar especial. E ainda quero viver muitos outros ao seu lado…</p>
+  <div class="carousel-wrap reveal">
+    <button class="arrow" id="prev" aria-label="Imagem anterior">‹</button>
+    <div class="cards" id="cards">
+      <article class="memory-card"><img loading="lazy" src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=700&q=80" alt="Casal abraçado"><div class="card-caption">Gosto da paz que sinto com você ♡</div></article>
+      <article class="memory-card"><img loading="lazy" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=700&q=80" alt="Casal de mãos dadas"><div class="card-caption">Quero mais momentos assim ✨</div></article>
+      <article class="memory-card"><img loading="lazy" src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=700&q=80" alt="Coração desenhado"><div class="card-caption">Você é muito especial pra mim ♡</div></article>
+      <article class="memory-card"><img loading="lazy" src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=80" alt="Casal aproveitando o momento"><div class="card-caption">Seu sorriso melhora meu dia</div></article>
+      <article class="memory-card"><img loading="lazy" src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=700&q=80" alt="Pôr do sol"><div class="card-caption">Que venham muitas histórias nossas ♡</div></article>
+    </div>
+    <button class="arrow" id="next" aria-label="Próxima imagem">›</button>
+  </div>
+</section>
+
+<section class="letter" id="carta">
+  <div class="reveal">
+    <div class="section-heading"><span class="heart">♡</span><h2>Quero te falar de coração…</h2></div>
+    <p>Adriely, eu gosto muito de você. Sério mesmo! Você é uma pessoa especial, me faz bem e eu gosto de ter você por perto.</p>
+    <p>Eu sei que meu jeito é brincalhão e que, às vezes, posso falar alguma coisa sem perceber que te magoou ou te deixou brava. Não é porque eu não me importo — muito pelo contrário. Às vezes eu passo do ponto tentando brincar, e quero aprender a entender melhor seus limites.</p>
+    <p>Não quero te ver brava, triste ou achando que não é importante pra mim. Também não quero que uma brincadeira boba estrague algo tão legal que existe entre nós.</p>
+    <p>Quero que a gente continue se divertindo, dando risada e sendo a gente mesmo, mas sempre com carinho, respeito e cuidado um com o outro. Se eu vacilar, quero poder te ouvir e melhorar, não ficar disputando quem tem razão.</p>
+    <p><strong>Você importa pra mim, Adriely. E eu quero cuidar bem do que estamos construindo. ❤️</strong></p>
+    <div class="signature">Gosto muito de você! ♡</div>
+  </div>
+  <div class="photo-frame reveal">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=85" alt="Um casal compartilhando carinho">
+    <div class="photo-label">Meu carinho por você é de verdade ♡</div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="value reveal"><span class="icon">♡</span><h3>Meu carinho</h3><p>É sincero e quero demonstrar isso melhor a cada dia.</p></div>
+  <div class="value reveal"><span class="icon">☺</span><h3>Seu sorriso</h3><p>Eu adoro quando a gente ri junto e tudo fica leve.</p></div>
+  <div class="value reveal"><span class="icon">☆</span><h3>Respeito sempre</h3><p>Brincadeira boa é aquela em que os dois se sentem bem.</p></div>
+  <div class="value reveal"><span class="icon">∞</span><h3>Sem estragar o que temos</h3><p>Quero cuidar dessa conexão com conversa e carinho.</p></div>
+</section>
+
+<section class="closing" id="sempre">
+  <h2>Não fica brava comigo, vai? ♡</h2>
+  <p>Eu sei que não basta falar bonito: também quero mostrar nas atitudes. Gosto muito de você e não quero que meu jeito brincalhão coloque em risco algo que é importante pra mim.</p>
+  <p>Se alguma brincadeira te chatear, me fala. Eu quero te entender — e continuar colecionando sorrisos com você.</p>
+  <button class="btn" id="loveBtn">♡ Um abraço virtual para você</button>
+</section>
+</main>
+<footer class="footer">Feito com carinho especialmente para Adriely ❤️</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">❤️ Você é muito especial pra mim, Adriely!</div>
+
+<script>
+(() => {
+  const cards = document.getElementById('cards');
+  const scrollCards = direction => {
+    const card = cards.querySelector('.memory-card');
+    if (!card) return;
+    cards.scrollBy({ left: direction * (card.getBoundingClientRect().width + 16), behavior: 'smooth' });
+  };
+  document.getElementById('prev').addEventListener('click', () => scrollCards(-1));
+  document.getElementById('next').addEventListener('click', () => scrollCards(1));
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.textContent = open ? '×' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  }));
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  document.getElementById('loveBtn').addEventListener('click', () => {
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+    for (let i = 0; i < 18; i++) {
+      const heart = document.createElement('span');
+      heart.className = 'float-heart';
+      heart.textContent = ['♥', '♡', '❤'][Math.floor(Math.random() * 3)];
+      heart.style.left = (Math.random() * 100) + 'vw';
+      heart.style.fontSize = (16 + Math.random() * 24) + 'px';
+      heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+      document.body.appendChild(heart);
+      heart.addEventListener('animationend', () => heart.remove(), { once: true });
+    }
+  });
+})();
+</script>
+</body>
+</html>
